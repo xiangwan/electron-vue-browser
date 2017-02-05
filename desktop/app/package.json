@@ -1,0 +1,20 @@
+{
+  "name": "shougou",
+  "version": "0.0.0",
+  "description": "An electron-vue project",
+  "main": "./dist/main.js",
+  "dependencies": {
+    "filesize": "^3.5.4", 
+    "fs-jetpack": "^0.10.5",
+    "leveldown": "^1.5.3",
+    "linvodb3": "^3.25.0",
+    "run-jxa": "^1.0.0",
+    "vue": "^2.1.10",
+    "vue-electron": "^1.0.6",
+    "vue-resource": "^1.0.3",
+    "vue-router": "^2.1.2",
+    "vuex": "^2.1.1"
+  },
+  "devDependencies": {},
+  "author": "xiangwan <xiangwan@oulook.com>"
+}
