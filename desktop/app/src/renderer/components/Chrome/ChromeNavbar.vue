@@ -50,6 +50,7 @@
                 return this.page.title || 'loading'
             },
             page: function () {
+                 console.log(this.navbar);
                 return this.navbar.pages[this.navbar.currentPageIndex];
             },
             loc: function () {

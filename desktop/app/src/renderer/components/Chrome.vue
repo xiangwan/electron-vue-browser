@@ -2,8 +2,8 @@
     <div class="app">
         <chrome-tabbar ref="tabs" :tabbar="tabbar" />
         <chrome-navbar ref="navbar" :navbar="navbar" />
-        <div class="content">  
-         <chrome-frame :ref="'page-'+index" v-for="(bPage,index) in bPages" v-bind:index="index" v-bind:b-page="bPage" /> 
+        <div class="content">
+            <chrome-frame :ref="'page-'+index" v-for="(bPage,index) in bPages" v-bind:index="index" v-bind:b-page="bPage" />
         </div>
     </div>
 </template>
@@ -21,7 +21,7 @@
     var urllib = require('url')
 
     import Vue from 'vue'
- 
+
 
     function createPageObject(location) {
         return {
@@ -147,16 +147,16 @@
                 this.pages.splice(pageIndex, 1);
 
                 // find the nearest adjacent page to make active
-                if (this.currentPageIndex == pageIndex) {
-                    for (var i = pageIndex; i >= 0; i--) {
-                        if (this.pages[i])
-                            return this.currentPageIndex = i;
-                    }
-                    for (var i = pageIndex; i < this.pages.length; i++) {
-                        if (this.pages[i])
-                            return this.currentPageIndex = i;
-                    }
+
+                for (var i = pageIndex; i >= 0; i--) {
+                    if (this.pages[i])
+                        return this.currentPageIndex = i;
                 }
+                for (var i = pageIndex; i < this.pages.length; i++) {
+                    if (this.pages[i])
+                        return this.currentPageIndex = i;
+                }
+
             },
 
             tabContextMenu: function (pageIndex) {
@@ -401,6 +401,6 @@
     
     .content {
         flex-grow: 1;
-        display: flex; 
+        display: flex;
     }
 </style>
