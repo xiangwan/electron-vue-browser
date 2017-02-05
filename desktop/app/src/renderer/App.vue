@@ -1,8 +1,5 @@
-<template>
-  <div>
- <chrome/>
- <router-view></router-view>
-  </div>
+<template> 
+ <chrome/>  
 </template>
 <script>
   import store from 'renderer/vuex/store'
